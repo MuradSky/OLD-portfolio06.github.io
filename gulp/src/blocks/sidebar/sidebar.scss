@@ -1,0 +1,212 @@
+.sidebar{
+    position: relative;
+    width: 16.7%;
+    background: #F3F4F9;
+    transition: all .3s linear;
+    @media (max-width:1100px) {
+        width: 104px;
+        height: 1272px;
+    }
+    @media (max-width:860px){
+        position: fixed;
+        z-index: 1000;
+        height: 100vh;
+    }
+    @media (max-width: 500px){
+        left: -20%;
+    }
+    @media (max-width:400px){
+        left: -24%;
+    }
+    @media (max-width: 340px){
+        left: -28%;
+    }
+    &__btn{
+        display: none;
+        position: absolute;
+        top: 0;
+        right: -47px;
+        z-index: 1;
+        background: url('../img/Union.svg') no-repeat center;
+        width: 48px;
+        height: 106px;
+        border: none;
+        cursor: pointer;
+        @media (max-width:1100px) {
+           display: flex;
+           justify-content: center;
+           align-items: center;
+        }
+    }
+}
+.sidebar__open{
+    width: 246px;
+    @media (max-width:500px){
+        left: 0;
+        width: 193px;
+    }
+}
+.sidebar__open .nav__text,
+.sidebar__open .logo__text{
+    display: block;
+}
+.burger{
+    position: relative;
+    width: 26px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0 0 -14px;
+    transition: all .3s linear;
+    &__item{
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: #262626;
+        border-radius: 50px;
+        transition: all .3s linear ;
+        &::before{
+            content: "";
+            position: absolute;
+            top: -9px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: #262626;
+            border-radius: 50px;
+            transition: all .3s linear .2s;
+        }
+        &::after{
+            content: "";
+            position: absolute;
+            top: 9px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: #262626;
+            border-radius: 50px;
+            transition: all .3s linear .2s;
+        }
+    }
+}
+.burger__item_active {
+    background: transparent;
+}
+.sidebar__open .burger__item::before{
+    top: 0;
+    transform: rotate(-45deg);
+}
+.sidebar__open .burger__item::after{
+    top: 0;
+    transform: rotate(45deg);
+}
+.logo{
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 40px 0 0 40px;
+    margin: 0 0 40px;
+    @media (max-width:1000px){
+        margin: 0 0 45px;
+    }
+    @media (max-width:500px){
+        padding: 40px 0 0 19px;
+        margin: 0 0 49px;
+    }
+    &__text{
+        font-family: 'Poppins';
+        font-weight: 500;
+        font-size: 16px;
+        letter-spacing: -1px;
+        color: #333333;
+        margin: 0 0 0 12px;
+        transition: all .5s linear;
+        @media (max-width:1100px) {
+            position: absolute;
+            display: none;
+            margin: 0 0 0 28px;
+        }
+    }
+}
+
+.nav{
+    position: relative;
+    width: 100%;
+    padding: 0 0 0 40px;
+    @media (max-width:500px){
+        padding: 0 0 0 20px;
+    }
+    &__link{
+        display: flex;
+        align-items: center;
+        padding: 20px 0;
+        &:hover .nav__text,
+        &:hover #nav__icon{
+            color: #807e7e;
+            stroke: #807e7e;
+        }
+        &::before{
+            content: "";
+            position: absolute;
+            left: 0;
+            width: 3px;
+            height: 24px;
+            background:  #34ABE0;
+            transform: scale(0);
+            transition: all .3s linear;
+        }
+        @media (max-width:1000px){
+            padding: 19px 0;
+        }
+        @media (max-width:500px){
+            margin: 0 0 8px;
+            padding: 20px 0;
+        }
+    }
+    &__text{
+        font-family: 'Open Sans';
+        font-weight: 600;
+        font-size: 16px;
+        color: #333333;
+        transition: all .2s linear;
+        margin: 0 0 0 14px;
+        @media (max-width:1100px) {
+            display: none;
+        }
+        @media (max-width: 500px){
+            margin: 0;
+        }
+    }
+    
+}
+.nav__link.nav__link_active::before{
+    transform: scale(1);
+}
+.nav__link.nav__link_active .nav__text,
+.nav__link.nav__link_active #nav__icon{
+    color: #34ABE0;
+    stroke: #34ABE0;
+}
+#sidebar-logo{
+    // position: absolute;
+    width: 50px;
+    height: 50px;
+    @media (max-width:1100px) {
+        width: 25px;
+        height: 25px;
+    }
+}
+#nav__icon{
+    width: 24px;
+    height: 24px;
+    stroke: #333;
+    transition: all .2s linear;
+    &:hover{
+        stroke: #333;
+    }
+    @media (max-width: 500px){
+        display: none;
+    }
+}

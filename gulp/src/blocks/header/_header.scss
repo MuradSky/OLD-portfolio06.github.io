@@ -1,0 +1,98 @@
+.header{
+    width: 100%;
+    padding: 45px 0 40px;
+    transition: all .3s linear;
+    @media (max-width:1100px) {
+        padding: 31px 0 26px;
+    }
+    @media (max-width:860px) {
+        padding: 37px 0 26px;
+    }
+    @media (max-width:500px) {
+        padding: 41px 0 26px;
+    }
+    &__inner{
+        display: flex;
+        flex-direction: column;
+    }
+    &__title{
+        font-family: 'Open Sans';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 28px;
+        color: #000000;
+        margin: 0 0 36px;
+        @media (max-width:1000px) {
+            text-align: right;
+            margin: 0 0 30px;
+        }
+        @media (max-width:860px) {
+            margin: 0 0 38px;
+        }
+        @media (max-width:500px) {
+            font-size: 24px;
+            margin: 0 0 26px;
+        }
+    }
+}
+.header_fixed{
+    @media (max-width: 850px){
+        position: fixed;
+        z-index: 30;
+        background: #fff;
+        padding: 26px 0;
+    }  
+}
+.header_fixed .header__title{
+    @media (max-width: 850px){
+        display: none;
+    }
+}
+.header_fixed .form{
+    @media (max-width: 850px){
+        padding: 0 75px 0 30px;
+    }
+    @media (max-width: 780px){
+        padding: 0 107px 0 59px;
+    }
+    @media (max-width: 500px){
+        padding: 0 0 0 59px;
+    }
+}
+.form{
+    @media (max-width:500px) {
+        padding: 0 0 0 13px;
+    }
+    &__box{
+        display: flex;
+        align-items: center;
+        
+        width: 100%;
+
+        border: 1px solid rgba(51, 51, 51, 0.2);
+        border-radius: 50px;
+        padding: 14px 16px;
+    }
+    &__search{
+        @media (max-width: 500px){
+            display: none;
+        }
+    }
+    &__input{
+        width: 100%;
+        border: none;
+        padding: 0 12px;
+        font-size: 18px;
+        @media (max-width:600px) {
+            font-size: 16px;
+        }
+        @media (max-width:500px) {
+            font-size: 14px;
+            padding: 0;
+        }
+    }
+}
+#search__icon{
+    width: 20px;
+    height: 20px;
+}

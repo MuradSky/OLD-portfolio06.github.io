@@ -1,0 +1,10 @@
+mixin header
+	header.header
+			.header__inner.container
+				h3.header__title Развлечения
+				form.form(action="#")
+					.form__box
+						label(for="input-search").form__search
+							svg#search__icon
+								use(xlink:href="#search")
+						input(type="text", id="input-search", placeholder="Какой магазин вам нужен?").form__input

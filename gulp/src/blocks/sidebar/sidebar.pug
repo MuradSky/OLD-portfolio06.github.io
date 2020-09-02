@@ -1,0 +1,35 @@
+mixin sidebar
+    .sidebar
+        button.sidebar__btn
+            .burger
+                span.burger__item
+        a(href="#").logo
+            svg#sidebar-logo
+                use(xlink:href="#logo")
+            span.logo__text.faded BECO
+        nav.nav
+            a(href="#").nav__link
+                .nav__icon
+                    svg#nav__icon
+                        use(xlink:href="#catalog")
+                span.nav__text.faded Каталог
+            a(href="#").nav__link
+                .nav__icon
+                    svg#nav__icon
+                        use(xlink:href="#health")
+                span.nav__text.faded Здоровье
+            a(href="#").nav__link
+                .nav__icon
+                    svg#nav__icon
+                        use(xlink:href="#beauty")
+                span.nav__text.faded Красота
+            a(href="#").nav__link.nav__link_active
+                .nav__icon
+                    svg#nav__icon
+                        use(xlink:href="#enjoy")
+                span.nav__text.faded Развлечения
+            a(href="#").nav__link
+                .nav__icon
+                    svg#nav__icon
+                        use(xlink:href="#car")
+                span.nav__text.faded Авто
